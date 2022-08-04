@@ -119,7 +119,7 @@ const Box = (props) => {
         // onKeyPress={onHandleKeyPress}
         onClick={onHandleClick} >
 
-            ID - {props.id+1}
+            ID - {props.id}
 
         </div>
 
