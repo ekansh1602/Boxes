@@ -25,15 +25,7 @@ export const boxes = (state = { boxes: [], keyboardActive: false }, action) => {
                 ...state,
                 boxes: state.boxes.map((item) => {
                     if(item.selected === true && state.keyboardActive === true){
-                        if(action.payload === 'top'){
-                            //console.log(item.id+" "+item.top);
-                            item.top = item.top - distance >= 0 ? item.top - distance : 0;
-                        }
-                        else if(action.payload === 'down'){
-                            //console.log(item.top);
-                            item.top = item.top + distance <= 400 ? item.top + distance : 400;
-                        }
-                        else if(action.payload === 'left'){
+                        if(action.payload === 'left'){
                             //console.log(item.left);
                             item.left = item.left - distance >= 0 ? item.left - distance : 0;
                         }
@@ -41,6 +33,16 @@ export const boxes = (state = { boxes: [], keyboardActive: false }, action) => {
                             //console.log(item.left);
                             item.left = item.left + distance <= 900 ? item.left + distance : 900;
                         }
+                        else if(action.payload === 'down'){
+                            //console.log(item.top);
+                            item.top = item.top + distance <= 400 ? item.top + distance : 400;
+                        }
+                        else if(action.payload === 'top'){
+                            //console.log(item.id+" "+item.top);
+                            item.top = item.top - distance >= 0 ? item.top - distance : 0;
+                        }
+
+
                     }
                     return item;
                 })
