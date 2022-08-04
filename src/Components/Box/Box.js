@@ -85,11 +85,11 @@ const Box = (props) => {
         if(event.key === 'ArrowLeft'){
             dispatch(move('left'));
         }
-        else if(event.key === 'ArrowDown'){
-            dispatch(move('down'));
-        }
         else if(event.key === 'ArrowRight'){
             dispatch(move('right'));
+        }
+        else if(event.key === 'ArrowDown'){
+            dispatch(move('down'));
         }
         else if(event.key === 'ArrowUp'){
             dispatch(move('top'));
