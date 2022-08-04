@@ -29,7 +29,7 @@ function App() {
 
     const box = {
       color: color,
-      id: state.boxes.length,
+      id: Math.floor(Math.random() * 100),
       selected: false,
       top: top,
       left: left,
